@@ -161,7 +161,7 @@ jobs:
           # Remove backup
           rm "${VALUES_FILE}.backup"
 
-      - name: Commit Helm changes for ${{ matrix.service }}
+      - name: Commit Helm changes for ${{ matrix.service }} to main branch
         run: |
           SERVICE="${{ matrix.service }}"
           TAG="$(echo ${{ github.sha }} | cut -c1-7)"
@@ -175,12 +175,12 @@ jobs:
             
             # Push with retry logic
             for i in {1..3}; do
-              if git push origin gitops; then
+              if git push origin main; then
                 echo "✅ Successfully pushed Helm update for ${SERVICE}"
                 break
               else
                 echo "⚠️ Push failed for ${SERVICE}, attempt $i/3. Retrying..."
-                git pull --rebase origin gitops
+                git pull --rebase origin main
                 sleep 2
               fi
               
