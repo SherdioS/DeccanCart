@@ -8,15 +8,17 @@ metadata:
 spec:
   project: retail-store
   source:
-    repoURL: https://github.com/LondheShubham153/retail-store-sample-app
-    targetRevision: gitops
+    repoURL: https://github.com/SherdioS/DeccanCart
+    targetRevision: main
     path: src/catalog/chart
     helm:
       valueFiles:
         - values.yaml
+  
   destination:
     server: https://kubernetes.default.svc
     namespace: retail-store
+  
   syncPolicy:
     automated:
       prune: true

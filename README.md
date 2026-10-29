@@ -1,4 +1,4 @@
-# Retail Store Sample App - GitOps with Amazon EKS Auto Mode
+# DeccanCart E-Commerce Platform
 
 ![Banner](./docs/images/banner.png)
 

@@ -4,10 +4,10 @@ metadata:
   name: retail-store
   namespace: argocd
 spec:
-  description: Retail Store Sample Application
+  description: DeccanCart Application Project
   
   sourceRepos:
-    - 'https://github.com/LondheShubham153/retail-store-sample-app'
+    - 'https://github.com/SherdioS/DeccanCart'
   
   destinations:
     - namespace: retail-store
