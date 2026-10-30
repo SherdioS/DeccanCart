@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   repository: sherwinrf/deccancart-catalog
   pullPolicy: Always
-  tag: "d099df2"
+  tag: "1532029"
 imagePullSecrets:
   - name: regcred
 nameOverride: ""
