@@ -216,7 +216,7 @@ jobs:
               echo "✅ **Status:** Deployment successful" >> $GITHUB_STEP_SUMMARY
               echo "" >> $GITHUB_STEP_SUMMARY
               echo "**Actions completed:**" >> $GITHUB_STEP_SUMMARY
-              echo "- 🔨 Built and pushed Docker images to ECR" >> $GITHUB_STEP_SUMMARY
+              echo "- 🔨 Built and pushed Docker images to DockerHub" >> $GITHUB_STEP_SUMMARY
               echo "- 📝 Updated Helm chart values" >> $GITHUB_STEP_SUMMARY
               echo "- 💾 Committed changes to repository" >> $GITHUB_STEP_SUMMARY
               echo "- 🔄 ArgoCD will sync automatically" >> $GITHUB_STEP_SUMMARY
