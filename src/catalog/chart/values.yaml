@@ -5,7 +5,6 @@
 replicaCount: 1
 image:
   repository: sherwinrf/deccancart-catalog
-  # public.ecr.aws/aws-containers/retail-store-sample-catalog
   pullPolicy: Always
   tag: "d099df2"
 imagePullSecrets:
@@ -71,10 +70,9 @@ app:
 mysql:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
-    # public.ecr.aws/docker/library/mysql
+    repository: public.ecr.aws/docker/library/mysql
     pullPolicy: IfNotPresent
-    tag: "0fd57ea"
+    tag: "8.0"
   service:
     type: ClusterIP
     port: 3306
